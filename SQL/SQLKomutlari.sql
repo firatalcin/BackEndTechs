@@ -15,5 +15,11 @@ update CUSTOMERS set NATION = 'TR'
 
 delete from CUSTOMERS
 
+--Truncate
 
+Truncate Table CUSTOMERS
+
+--Where
+
+select * from CUSTOMERS where CITY = 'İstanbul'
 
