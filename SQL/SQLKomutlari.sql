@@ -23,3 +23,7 @@ Truncate Table CUSTOMERS
 
 select * from CUSTOMERS where CITY = 'İstanbul'
 
+--And Operatörü
+
+select * from CUSTOMERS where CITY = 'İstanbul' and DISTRICT = 'Beylikdüzü'
+
