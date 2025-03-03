@@ -27,3 +27,11 @@ select * from CUSTOMERS where CITY = 'İstanbul'
 
 select * from CUSTOMERS where CITY = 'İstanbul' and DISTRICT = 'Beylikdüzü'
 
+--Or Operatörü
+
+select * from CUSTOMERS where CITY = 'İstanbul' or CITY = 'Erzurum'
+
+--Distinct
+
+select Distinct AGE from CUSTOMERS where CITY = 'İstanbul'
+
