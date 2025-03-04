@@ -35,3 +35,11 @@ select * from CUSTOMERS where CITY = 'İstanbul' or CITY = 'Erzurum'
 
 select Distinct AGE from CUSTOMERS where CITY = 'İstanbul'
 
+--Order By
+
+select * from CUSTOMERS order by CITY, DISTRICT asc
+
+-- Top
+
+select top 1 * from CUSTOMERS order by CUSTOMERNAME 
+
