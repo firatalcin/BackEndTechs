@@ -43,3 +43,13 @@ select * from CUSTOMERS order by CITY, DISTRICT asc
 
 select top 1 * from CUSTOMERS order by CUSTOMERNAME 
 
+-- Aggregate Functions
+
+select Count(Id), Min(AMOUNT), Max(TOTALPRICE), SUM(PRICE), AVG(AMOUNT) from SALES
+
+-- Group By
+
+select CITY, SUM(TOTALPRICE) as TOTALPRICE from SALES group by CITY order by Sum(TOTALPRICE) desc
+
+
+
