@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="https://formtester.goodbytes.be/post.php" method="post">
+        <label for="email">E-Posta</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <p>-Cinsiyetiniz-</p>
+        <label for="gender">Erkek</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <br>
+        <label for="gender">Kadın</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <br>
+        <p>-İletişim-</p>
+        <label for="sms">SMS</label>
+        <input type="checkbox" name="contact" value="sms">
+        <br>
+        <label for="phone">Phone</label>
+        <input type="checkbox" name="contact" value="phone">
+        <br>
+        <label for="email">EMail</label>
+        <input type="checkbox" name="contact" value="email">
+        <br>
+        <p>Şehir Seçin</p>
+        <label for="City">Şehir</label>
+        <select name="city" id="">
+            <option value="34">İstanbul</option>
+            <option value="35">İzmir</option>
+            <option value="06">Ankara</option>
+        </select>
+        <br>
+        <label for="message">Mesaj Giriniz</label>
+        <textarea name="message" id="message" rows="4" cols="5"></textarea>
+        <br>
+        <label for="date">Doğum Tarihi</label>
+        <input type="date" id="birthdate" name="birthdate">
+        <br>
+        <button type="submit">Gönder</button>
+    </form>
+</body>
+</html>
