@@ -1,0 +1,38 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+        <div class="container">
+            <a href="/" class="navbar-brand"></a>
+
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a href="/" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/course" class="nav-link active">Course</a>
+                </li>
+                <li class="nav-item">
+                    <a asp-controller="Products" asp-action="Index" class="nav-link active">Products</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<main class="container my-3">
+    @RenderBody()
+</main>
+
+</body>
+</html>
