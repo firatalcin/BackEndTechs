@@ -9,10 +9,15 @@ namespace DotnetBasics.Controllers
             return View();
         }
 
-        public string About()
+        public ActionResult About()
         {
-            return "About";
+            return View();
         }
 
+        
+        public ActionResult Contact()
+        {
+            return View();
+        }
     }
 }

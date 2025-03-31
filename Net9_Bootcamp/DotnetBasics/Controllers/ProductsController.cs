@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DotnetBasics.Controllers
 {
-    public class CourseController : Controller
+    public class ProductsController : Controller
     {
         public ActionResult Index()
         {
@@ -19,5 +19,6 @@ namespace DotnetBasics.Controllers
         {
             return View();
         }
+
     }
 }
