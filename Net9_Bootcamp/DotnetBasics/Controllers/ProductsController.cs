@@ -12,7 +12,20 @@ namespace DotnetBasics.Controllers
 
         public ActionResult List()
         {
-            return View();
+            List<Product> urunler = new List<Product>
+            {
+                new Product {
+                    urunBaslik = "IPhone 15", urunFiyat= 80000, urunResim="i1.png", urunAciklama="Güzel telefon", urunSatistami=true
+                },
+                new Product {
+                    urunBaslik = "IPhone 16", urunFiyat= 90000, urunResim="i2.png", urunAciklama="Güzel telefon", urunSatistami=true
+                },
+                new Product {
+                    urunBaslik = "IPhone 17", urunFiyat= 95000, urunResim="i3.png", urunAciklama="Güzel telefon", urunSatistami=false
+                },
+            };
+
+            return View(urunler);
         }
         
         
