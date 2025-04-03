@@ -1,13 +1,21 @@
-﻿<h1>Products/Details</h1>
+﻿@model Product
+
+<h1>Products/Details</h1>
 
 <div class="row">
     <div class="col-4">
-        <img src="~/img/@ViewData["urunResim"]" alt="samsung-s24.jpg" class="img-fluid">
+        <img src="~/img/@Model.urunResim" alt="" class="img-fluid" />
     </div>
     <div class="col-8">
-        <h1>@ViewData["urunBaslik"]</h1>
-        <p>@ViewData["urunAciklama"]</p>
-        <p>@ViewData["urunFiyat"]</p>
-        <p>@ViewData["urunSatistami"]</p>
+        <h1>@Model.urunBaslik</h1>
+        <p>
+            @Model.urunAciklama
+        </p>
+        <p>
+            @Model.urunFiyat
+        </p>
+        <p>
+            @Model.urunSatistami
+        </p>
     </div>
 </div>
