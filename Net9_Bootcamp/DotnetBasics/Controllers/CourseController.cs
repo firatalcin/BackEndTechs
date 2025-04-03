@@ -12,33 +12,13 @@ namespace DotnetBasics.Controllers
 
         public ActionResult List()
         {
-            // string kursAdi1 = "Javascript Kursu";
-            // string kursAdi2 = "React Kursu";
+            List<Course> kurslar = new List<Course> {
+                new Course { Title = "Javascript Kursu",Image = "1.jpg" },
+                new Course { Title = "React Kursu", Image = "2.jpg" },
+                new Course{Title = "Angular Kursu",Image = "3.jpg" }
+            };
 
-            // string kursAciklama1 = "Javascript Kurs Açıklaması";
-            // string kursAciklama2 = "React Kurs Açıklaması";
-
-            string[] kursAdlari = ["Javascript Kursu", "React Kursu"];
-            string[] kursAciklamalari = ["Javascript Kurs Açıklaması", "React Kurs Açıklaması"];
-            string[] kursResimleri = ["1.jpg", "2.jpg"];
-
-            ViewData["kursAdi1"] = kursAdlari[0]; // Javascript Kursu
-            ViewData["kursAdi2"] = kursAdlari[1]; // React Kursu
-
-            ViewData["kursAciklama1"] = kursAciklamalari[0]; // Javascript Kurs Açıklaması
-            ViewData["kursAciklama2"] = kursAciklamalari[1]; // React Kurs Açıklaması
-
-            ViewData["kursResim1"] = kursResimleri[0]; // 1.jpg
-            ViewData["kursResim2"] = kursResimleri[1]; // 2.jpg
-
-            // ViewData["kursAdlari"] = kursAdlari;
-            // ViewData["kursAciklamalari"] = kursAciklamalari;
-            // ViewData["kursResimleri"] = kursResimleri;
-            // @(((string[])ViewData["kursAdlari"])[0])
-
-            return View();
-            
-            return View();
+            return View(kurslar);
         }
         
         
