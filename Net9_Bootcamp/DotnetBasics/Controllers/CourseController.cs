@@ -1,3 +1,4 @@
+using DotnetBasics.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DotnetBasics.Controllers
@@ -43,7 +44,11 @@ namespace DotnetBasics.Controllers
         
         public ActionResult Details()
         {
-            return View();
+            Course kurs1 = new Course();
+            kurs1.Title = "Django Kursu";
+            kurs1.Image = "1.jpg";
+
+            return View(kurs1);
         }
     }
 }
