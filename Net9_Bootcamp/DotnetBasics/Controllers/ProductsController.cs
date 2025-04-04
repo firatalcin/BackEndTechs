@@ -7,7 +7,8 @@ namespace DotnetBasics.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            string[] kurslar = { "Javascript Kursu", "React Kursu", "Angular Kursu" };
+            return View(kurslar);
         }
 
         public ActionResult List()
