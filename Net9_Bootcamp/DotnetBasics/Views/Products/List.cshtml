@@ -1,33 +1,13 @@
 ﻿@model List<Product>
 
-<h1>Products/List</h1>
-
 <div class="row">
 
     @foreach (Product urun in Model)
     {
         @if (urun.urunSatistami)
         {
-            <div class="col-6">
-                <div class="card mb-3">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <img src="~/img/@urun.urunResim" class="img-fluid rounded-start" />
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">@urun.urunBaslik</h5>
-                                <p class="card-text">@urun.urunAciklama</p>
-                                @if (!urun.urunSatistami)
-                                {
-                                    <p>Satışta değil</p>
-                                }
-
-                                <button class="btn btn-primary btn-sm">Detay</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-md-3">
+                @await Html.PartialAsync("_ProductCard", urun)
             </div>
         }
 
