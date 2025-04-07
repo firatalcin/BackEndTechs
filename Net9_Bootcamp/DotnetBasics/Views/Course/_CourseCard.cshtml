@@ -4,6 +4,7 @@
     <img src="~/img/@Model.Image" class="card-img-top" alt="">
     <div class="card-body">
         <h5 class="card-title">@Model.Title</h5>
-        <a href="#" class="btn btn-sm btn-secondary">İncele</a>
+        <a asp-controller="Course" asp-action="Details" asp-route-id="@Model.Id"
+           class="btn btn-sm btn-secondary">İncele</a>
     </div>
 </div>
