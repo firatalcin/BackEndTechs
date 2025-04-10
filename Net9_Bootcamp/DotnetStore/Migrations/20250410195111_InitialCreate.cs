@@ -2,6 +2,8 @@
 
 #nullable disable
 
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
 namespace DotnetStore.Migrations
 {
     /// <inheritdoc />
@@ -23,6 +25,19 @@ namespace DotnetStore.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Products", x => x.Id);
+                });
+
+            migrationBuilder.InsertData(
+                table: "Products",
+                columns: new[] { "Id", "IsActive", "Name", "Price" },
+                values: new object[,]
+                {
+                    { 1, false, "Apple Watch 7", 10000.0 },
+                    { 2, true, "Apple Watch 8", 20000.0 },
+                    { 3, true, "Apple Watch 9", 30000.0 },
+                    { 4, false, "Apple Watch 10", 40000.0 },
+                    { 5, true, "Apple Watch 11", 50000.0 },
+                    { 6, true, "Apple Watch 12", 60000.0 }
                 });
         }
 
