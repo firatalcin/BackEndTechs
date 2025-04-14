@@ -12,11 +12,15 @@ namespace DotnetStore.Controllers
             _context = context;
         }
 
-        // GET: ProductsController
         public ActionResult Index()
         {
-            List<Product> products = _context.Products.ToList();
-            return View(products);
+            return View();
+        }
+
+        public ActionResult List()
+        {
+            var urunler = _context.Products.ToList();
+            return View(urunler);
         }
 
     }
