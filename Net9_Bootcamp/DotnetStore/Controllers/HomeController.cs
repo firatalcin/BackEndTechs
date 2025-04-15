@@ -1,4 +1,3 @@
-using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using DotnetStore.Models;
 
@@ -14,7 +13,7 @@ public class HomeController : Controller
 
     public ActionResult Index()
     {
-        var urunler = _context.Products.ToList();
+        var urunler = _context.Products.Where(product => product.IsActive && product.MainPage).ToList();
         return View(urunler);
     }
 }
