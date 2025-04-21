@@ -5,7 +5,8 @@ namespace DotnetStore.Models;
 public class AppDbContext : DbContext
 {
     public DbSet<Product> Products { get; set; }
-    public DbSet<Category> Categories { get; set; }  
+    public DbSet<Category> Categories { get; set; }
+    public DbSet<Slider> Sliders { get; set; }
 
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
     {
@@ -16,6 +17,14 @@ public class AppDbContext : DbContext
     {
         base.OnModelCreating(modelBuilder);
 
+        modelBuilder.Entity<Slider>().HasData(
+            new List<Slider> {
+                new Slider { Id=1, Title="Slider 1 Başlık", Description= "Slider 1 Açıklama", Image="slider-1.jpeg", IsActive= true, Index=0},
+                new Slider { Id=2, Title="Slider 2 Başlık", Description= "Slider 2 Açıklama", Image="slider-2.jpeg", IsActive= true, Index=1},
+                new Slider { Id=3, Title="Slider 3 Başlık", Description= "Slider 3 Açıklama", Image="slider-3.jpeg", IsActive= true, Index=2}
+            }
+        );
+        
         modelBuilder.Entity<Category>().HasData(
             new List<Category> {
                 new Category() {Id=1, Name= "Telefon", Url="telefon"},
