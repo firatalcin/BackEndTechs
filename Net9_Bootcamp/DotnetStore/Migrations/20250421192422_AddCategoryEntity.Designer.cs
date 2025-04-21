@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DotnetStore.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250415202245_AddCategoryEntity")]
+    [Migration("20250421192422_AddCategoryEntity")]
     partial class AddCategoryEntity
     {
         /// <inheritdoc />
@@ -35,7 +35,7 @@ namespace DotnetStore.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Category");
+                    b.ToTable("Categories");
 
                     b.HasData(
                         new
