@@ -26,6 +26,18 @@ namespace DotnetStore.Controllers
         public ActionResult Details(int id)
         {
             var urun =  _context.Products.Find(id);
+
+            if (urun == null)
+            {
+                return RedirectToAction("List");
+            }
+            
+            ViewData["BenzerUrunler"] = _context.Products
+                .Where(i => i.IsActive && i.CategoryId == urun.CategoryId && i.Id != id)
+                .Take(4)
+                .ToList();
+            
+            
             return View(urun);
         }
 
