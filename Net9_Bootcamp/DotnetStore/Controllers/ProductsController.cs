@@ -17,9 +17,9 @@ namespace DotnetStore.Controllers
             return View();
         }
 
-        public ActionResult List()
+        public ActionResult List(string url)
         {
-            var urunler = _context.Products.Where(i => i.IsActive).ToList();
+            var urunler = _context.Products.Where(i => i.IsActive && i.Category.Url == url).ToList();
             return View(urunler);
         }
 

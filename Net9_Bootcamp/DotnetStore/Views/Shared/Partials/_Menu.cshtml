@@ -3,7 +3,7 @@
 <nav class="nav nav-pills flex-column flex-nowrap overflow-auto slider_nav">
     @foreach (var kategori in Model)
     {
-        <a href="#" class="nav-link">@kategori.Name</a>
+        <a href="/Products/@kategori.Url" class="nav-link">@kategori.Name</a>
     }
 
 </nav>
